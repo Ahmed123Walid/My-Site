@@ -1,0 +1,47 @@
+@use "../mixins_and_functions/mixin" as *;
+@use "../helpers/variables" as *;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  // background-color: $main-bg-black;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  @include breakpoint(small){
+    width: 750px;
+  }
+  @include breakpoint(medium){
+    width: 970px;
+  }
+  @include breakpoint(large){
+    width: 1170px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
